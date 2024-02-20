@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/level4fin"
+    android:backgroundTint="#00AC8989"
+    tools:ignore="MissingDefaultResource">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="1365dp"
+        android:layout_height="905dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/level7"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/fondopj"
+        tools:layout_editor_absoluteX="-38dp" />
+
+    <ImageButton
+        android:id="@+id/level1"
+        android:layout_width="260dp"
+        android:layout_height="240dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="116dp"
+        android:backgroundTint="#00CF0C0C"
+        android:scaleType="centerCrop"
+        android:src="@drawable/lev2png"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/level2"
+        android:layout_width="260dp"
+        android:layout_height="240dp"
+        android:backgroundTint="#00FFFFFF"
+        android:scaleType="centerCrop"
+        android:src="@drawable/level3fin"
+        tools:layout_editor_absoluteX="1017dp"
+        tools:layout_editor_absoluteY="544dp" />
+
+    <ImageButton
+        android:id="@+id/level2"
+        android:layout_width="260dp"
+        android:layout_height="240dp"
+        android:backgroundTint="#00FFFFFF"
+        android:scaleType="centerCrop"
+        android:src="@drawable/level2fin"
+        tools:layout_editor_absoluteX="510dp"
+        tools:layout_editor_absoluteY="544dp" />
+
+    <ImageButton
+        android:id="@+id/level4"
+        android:layout_width="260dp"
+        android:layout_height="240dp"
+        android:backgroundTint="#00FFFFFF"
+        android:scaleType="centerCrop"
+        android:src="@drawable/level4fin"
+        tools:layout_editor_absoluteX="757dp"
+        tools:layout_editor_absoluteY="280dp" />
+
+    <ImageButton
+        android:id="@+id/level5"
+        android:layout_width="260dp"
+        android:layout_height="240dp"
+        android:backgroundTint="#00838383"
+        android:scaleType="centerCrop"
+        android:src="@drawable/level5fin"
+        tools:layout_editor_absoluteX="264dp"
+        tools:layout_editor_absoluteY="280dp" />
+
+    <ImageButton
+        android:id="@+id/level6"
+        android:layout_width="260dp"
+        android:layout_height="240dp"
+        android:backgroundTint="#00FFFFFF"
+        android:scaleType="centerCrop"
+        android:src="@drawable/level6fin"
+        tools:layout_editor_absoluteX="4dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <ImageButton
+        android:id="@+id/level7"
+        android:layout_width="260dp"
+        android:layout_height="240dp"
+        android:backgroundTint="#00FFFFFF"
+        android:scaleType="centerCrop"
+        android:src="@drawable/level7fin"
+        tools:layout_editor_absoluteX="510dp"
+        tools:layout_editor_absoluteY="3dp" />
+
+    <ImageButton
+        android:id="@+id/level8"
+        android:layout_width="260dp"
+        android:layout_height="240dp"
+        android:backgroundTint="#00FFFFFF"
+        android:scaleType="centerCrop"
+        android:src="@drawable/level8fin"
+        tools:layout_editor_absoluteX="1017dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
