@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="MissingDefaultResource">
+
+    <ImageView
+        android:id="@+id/BackGroundLevelColors1"
+        android:layout_width="1353dp"
+        android:layout_height="861dp"
+        app:srcCompat="@drawable/bosque_hadas_colores_vivos_445983_743"
+        tools:layout_editor_absoluteX="-39dp"
+        tools:layout_editor_absoluteY="-32dp"
+        tools:ignore="MissingConstraints" />
+
+
+    <ImageView
+        android:id="@+id/BackGroundBigColorLev1"
+        android:layout_width="1069dp"
+        android:layout_height="631dp"
+        app:srcCompat="@drawable/backwhite"
+        tools:layout_editor_absoluteX="106dp"
+        tools:layout_editor_absoluteY="0dp"
+        tools:ignore="MissingConstraints"/>
+
+
+    <ImageView
+        android:id="@+id/BackGroundPickColorsCorrectLev1"
+        android:layout_width="1584dp"
+        android:layout_height="671dp"
+        app:layout_constraintTop_toBottomOf="@+id/BackGroundBigColorLev1"
+        app:srcCompat="@drawable/backgroundfff"
+        tools:layout_editor_absoluteX="-152dp"
+        tools:ignore="MissingConstraints"/>
+
+    <ImageView
+        android:id="@+id/BackGroundTVPickColorLev1"
+        android:layout_width="994dp"
+        android:layout_height="592dp"
+        app:srcCompat="@drawable/amarillo"
+        tools:layout_editor_absoluteX="144dp"
+        tools:layout_editor_absoluteY="16dp"
+        tools:ignore="MissingConstraints"/>
+
+    <ImageView
+        android:id="@+id/pickColorBlue"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="113dp"
+        app:layout_constraintStart_toStartOf="@+id/BackGroundLevelColors1"
+        app:srcCompat="@drawable/botoblau"
+        tools:layout_editor_absoluteY="639dp"
+        tools:ignore="MissingConstraints"/>
+
+    <TextView
+        android:id="@+id/imgPickColorUserPickLev1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:paddingLeft="200dp"
+        android:paddingTop="100dp"
+        android:text="@string/pickColorLev1"
+        android:textSize="300dp"
+        app:layout_constraintBottom_toBottomOf="@+id/BackGroundTVPickColorLev1"
+        app:layout_constraintEnd_toEndOf="@+id/BackGroundTVPickColorLev1"
+        app:layout_constraintStart_toStartOf="@+id/BackGroundTVPickColorLev1"
+        app:layout_constraintTop_toTopOf="@+id/BackGroundTVPickColorLev1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="90dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="1188dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="373dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="640dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="915dp" />
+
+    <ImageView
+        android:id="@+id/PickColorBlueLev1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline23"
+        app:layout_constraintEnd_toStartOf="@+id/guideline19"
+        app:layout_constraintStart_toStartOf="@+id/guideline17"
+        app:layout_constraintTop_toTopOf="@+id/guideline22"
+        app:srcCompat="@drawable/botoblau" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="638dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="795dp" />
+
+    <ImageView
+        android:id="@+id/PickColorRedLev1"
+        android:layout_width="276dp"
+        android:layout_height="165dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline23"
+        app:layout_constraintEnd_toStartOf="@+id/guideline20"
+        app:layout_constraintStart_toStartOf="@+id/guideline19"
+        app:layout_constraintTop_toTopOf="@+id/guideline22"
+        app:srcCompat="@drawable/botonrojo" />
+
+    <ImageView
+        android:id="@+id/PickColorGreenLev1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline23"
+        app:layout_constraintEnd_toStartOf="@+id/guideline21"
+        app:layout_constraintStart_toStartOf="@+id/guideline20"
+        app:layout_constraintTop_toTopOf="@+id/guideline22"
+        app:srcCompat="@drawable/botonverde" />
+
+    <ImageView
+        android:id="@+id/PickColorPurpleLev1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline23"
+        app:layout_constraintEnd_toStartOf="@+id/guideline18"
+        app:layout_constraintStart_toStartOf="@+id/guideline21"
+        app:layout_constraintTop_toTopOf="@+id/guideline22"
+        app:srcCompat="@drawable/botomorado" />
+
+    <ImageView
+        android:id="@+id/HomeBackLevelMenu"
+        android:layout_width="78dp"
+        android:layout_height="85dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline24"
+        app:layout_constraintEnd_toStartOf="@+id/guideline17"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/home" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="102dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
