@@ -124,5 +124,13 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.7578125" />
 
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="153dp"
+        android:layout_height="153dp"
+        app:srcCompat="@drawable/lev2png"
+        tools:layout_editor_absoluteX="107dp"
+        tools:layout_editor_absoluteY="134dp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
