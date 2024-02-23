@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">PJ-Infantil</string>
     <string name="pickColorLev1">Blue</string>
+    <string name="PlayMenuPrincipal">Jugar</string>
+    <string name="ConfigMenuPrincipal">Configuració</string>
+    <string name="HistoriaMenuPrincipal">Història</string>
 </resources>
