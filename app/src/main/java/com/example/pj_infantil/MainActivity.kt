@@ -1,24 +1,46 @@
 package com.example.pj_infantil
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
-import android.view.MenuItem
+import android.widget.Button
+import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var buttonPlayMenuPrincipal: TextView
+    private lateinit var buttonConfigMenuPrincipal: TextView
+    private lateinit var buttonHistoryMenuPrincipal: TextView
+
+    //prueba
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_menu_principal)
-    }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when (item.itemId) {
+        buttonPlayMenuPrincipal = findViewById(R.id.TVPlayMenuPrincipal)
 
-            else -> super.onOptionsItemSelected(item)
+        buttonPlayMenuPrincipal.setOnClickListener {
+
+            val intent = Intent(this, MapLevels::class.java)
+            startActivity(intent)
         }
 
-        return(super.onOptionsItemSelected(item));
+        buttonConfigMenuPrincipal = findViewById(R.id.TVConfigMenuPrincipal)
+
+        buttonConfigMenuPrincipal.setOnClickListener {
+
+            val intent = Intent(this, SecundaryMenu::class.java)
+            startActivity(intent)
+        }
+
+        buttonHistoryMenuPrincipal = findViewById(R.id.TVHistorMenuPrincipal)
+
+        buttonHistoryMenuPrincipal.setOnClickListener {
+
+            val intent = Intent(this, SecundaryMenu::class.java)
+            startActivity(intent)
+        }
+
     }
-
-
-
 }
