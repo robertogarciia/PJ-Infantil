@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var buttonConfigMenuPrincipal: TextView
     private lateinit var buttonHistoryMenuPrincipal: TextView
 
-    //prueba
+    //prueba 2
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
