@@ -77,6 +77,7 @@ class level1memory : AppCompatActivity() {
             // Segundo clic
             card.setImageResource(imageId)
 
+
             if (initialImages[lastClickedCard!!].drawable.constantState == initialImages[cardIndex].drawable.constantState) {
                 // Se encontró un par, haz las imágenes correspondientes visibles
                 initialImages[lastClickedCard!!].visibility = View.VISIBLE
