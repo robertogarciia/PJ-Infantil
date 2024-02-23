@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
 
         buttonConfigMenuPrincipal.setOnClickListener {
 
-            val intent = Intent(this, SecundaryMenu::class.java)
+            val intent = Intent(this, level1memory::class.java)
             startActivity(intent)
         }
 
