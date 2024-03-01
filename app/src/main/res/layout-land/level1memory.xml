@@ -8,12 +8,16 @@
 
     <ImageView
         android:id="@+id/BackGroundLevelColors1"
-        android:layout_width="1353dp"
-        android:layout_height="861dp"
+        android:layout_width="1446dp"
+        android:layout_height="946dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.446"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.459"
         app:srcCompat="@drawable/bosque_hadas_colores_vivos_445983_743"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="-39dp"
-        tools:layout_editor_absoluteY="-32dp" />
+        tools:ignore="MissingConstraints" />
 
     <ImageButton
         android:id="@+id/madera_1"
