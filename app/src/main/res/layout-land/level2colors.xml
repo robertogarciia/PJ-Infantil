@@ -8,7 +8,7 @@
     tools:ignore="MissingDefaultResource">
 
     <ImageView
-        android:id="@+id/BackGroundLevelColors1"
+        android:id="@+id/PickColorLev1BackgroundGeneral"
         android:layout_width="1353dp"
         android:layout_height="861dp"
         app:srcCompat="@drawable/bosque_hadas_colores_vivos_445983_743"
@@ -50,7 +50,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="113dp"
-        app:layout_constraintStart_toStartOf="@+id/BackGroundLevelColors1"
+        app:layout_constraintStart_toStartOf="@+id/PickColorLev1BackgroundGeneral"
         app:srcCompat="@drawable/botoblau"
         tools:layout_editor_absoluteY="639dp"
         tools:ignore="MissingConstraints"/>
@@ -138,7 +138,7 @@
         app:srcCompat="@drawable/botonrojo" />
 
     <ImageView
-        android:id="@+id/PickColorGreenLev1"
+        android:id="@+id/PickColorLev1BackgroundGeneral"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline23"
