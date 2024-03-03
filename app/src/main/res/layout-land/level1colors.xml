@@ -45,7 +45,7 @@
         android:id="@+id/imgPickColorUserPickLev1"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:paddingLeft="200dp"
+        android:paddingLeft="350dp"
         android:paddingTop="100dp"
         android:text="@string/pickColorLev1"
         android:textSize="250dp"
