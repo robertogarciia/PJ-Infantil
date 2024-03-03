@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="MissingDefaultResource">
+
+    <ImageView
+        android:id="@+id/Fondo"
+        android:layout_width="1560dp"
+        android:layout_height="1244dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.285"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.466"
+        app:srcCompat="@drawable/amarillo" />
+
+    <ImageView
+        android:id="@+id/ardilla1"
+        android:layout_width="688dp"
+        android:layout_height="451dp"
+        android:layout_marginEnd="52dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.501"
+        app:srcCompat="@drawable/ardilla" />
+
+    <ImageView
+        android:id="@+id/ardilla2"
+        android:layout_width="688dp"
+        android:layout_height="451dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.501"
+        app:srcCompat="@drawable/ardilla" />
+
+    <ImageView
+        android:id="@+id/flor"
+        android:layout_width="98dp"
+        android:layout_height="94dp"
+        android:layout_marginTop="476dp"
+        android:layout_marginEnd="520dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/flor" />
+
+    <ImageView
+        android:id="@+id/gorra"
+        android:layout_width="101dp"
+        android:layout_height="94dp"
+        android:layout_marginTop="264dp"
+        android:layout_marginEnd="376dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/gorra" />
+
+    <ImageView
+        android:id="@+id/mariposa"
+        android:layout_width="95dp"
+        android:layout_height="96dp"
+        android:layout_marginTop="228dp"
+        android:layout_marginEnd="176dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/mamadallonga" />
+
+    <ImageView
+        android:id="@+id/sol"
+        android:layout_width="139dp"
+        android:layout_height="139dp"
+        android:layout_marginEnd="476dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.219"
+        app:srcCompat="@drawable/sol" />
+
+    <TextView
+        android:id="@+id/Titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTint="#FFFFFF"
+        android:text="TROBA LES 4 DIFERENCIES"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/checkGorra"
+        android:layout_width="50dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="264dp"
+        android:layout_marginEnd="376dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/check" />
+
+    <ImageView
+        android:id="@+id/checkSol"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="152dp"
+        android:layout_marginEnd="476dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/check" />
+
+    <ImageView
+        android:id="@+id/checkFlor"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="476dp"
+        android:layout_marginEnd="524dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/check" />
+
+    <ImageView
+        android:id="@+id/checkMariposa"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="228dp"
+        android:layout_marginEnd="176dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/check" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
