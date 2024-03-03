@@ -190,7 +190,7 @@
         app:layout_constraintHorizontal_bias="0.247"
         app:layout_constraintStart_toStartOf="@+id/fondo"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.171"
+        app:layout_constraintVertical_bias="0.094"
         app:srcCompat="@drawable/pieza1" />
 
     <ImageView
@@ -202,7 +202,7 @@
         app:layout_constraintHorizontal_bias="0.755"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.171"
+        app:layout_constraintVertical_bias="0.094"
         app:srcCompat="@drawable/pieza1" />
 
     <ImageView
@@ -214,7 +214,7 @@
         app:layout_constraintHorizontal_bias="0.247"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.884"
+        app:layout_constraintVertical_bias="0.93"
         app:srcCompat="@drawable/pieza1" />
 
     <ImageView
@@ -226,7 +226,7 @@
         app:layout_constraintHorizontal_bias="0.755"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.888"
+        app:layout_constraintVertical_bias="0.934"
         app:srcCompat="@drawable/pieza1" />
 
     <ImageView
@@ -238,7 +238,7 @@
         app:layout_constraintHorizontal_bias="0.247"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.888"
+        app:layout_constraintVertical_bias="0.934"
         app:srcCompat="@drawable/pieza3" />
 
     <ImageView
@@ -250,7 +250,7 @@
         app:layout_constraintHorizontal_bias="0.247"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.171"
+        app:layout_constraintVertical_bias="0.094"
         app:srcCompat="@drawable/pieza3" />
 
     <ImageView
@@ -262,7 +262,7 @@
         app:layout_constraintHorizontal_bias="0.755"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.171"
+        app:layout_constraintVertical_bias="0.094"
         app:srcCompat="@drawable/pieza3" />
 
     <ImageView
@@ -274,7 +274,7 @@
         app:layout_constraintHorizontal_bias="0.755"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.884"
+        app:layout_constraintVertical_bias="0.93"
         app:srcCompat="@drawable/pieza3" />
 
     <ImageView
@@ -286,7 +286,7 @@
         app:layout_constraintHorizontal_bias="0.755"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.172"
+        app:layout_constraintVertical_bias="0.094"
         app:srcCompat="@drawable/pieza2" />
 
     <ImageView
@@ -298,7 +298,7 @@
         app:layout_constraintHorizontal_bias="0.247"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.171"
+        app:layout_constraintVertical_bias="0.094"
         app:srcCompat="@drawable/pieza2" />
 
     <ImageView
@@ -307,10 +307,10 @@
         android:layout_height="322dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.247"
+        app:layout_constraintHorizontal_bias="0.232"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.884"
+        app:layout_constraintVertical_bias="0.93"
         app:srcCompat="@drawable/pieza2" />
 
     <ImageView
@@ -322,7 +322,7 @@
         app:layout_constraintHorizontal_bias="0.755"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.888"
+        app:layout_constraintVertical_bias="0.934"
         app:srcCompat="@drawable/pieza2" />
 
     <ImageView
@@ -334,7 +334,7 @@
         app:layout_constraintHorizontal_bias="0.755"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.888"
+        app:layout_constraintVertical_bias="0.934"
         app:srcCompat="@drawable/pieza4" />
 
     <ImageView
@@ -346,7 +346,7 @@
         app:layout_constraintHorizontal_bias="0.247"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.171"
+        app:layout_constraintVertical_bias="0.094"
         app:srcCompat="@drawable/pieza4" />
 
     <ImageView
@@ -358,7 +358,7 @@
         app:layout_constraintHorizontal_bias="0.755"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.171"
+        app:layout_constraintVertical_bias="0.094"
         app:srcCompat="@drawable/pieza4" />
 
     <ImageView
@@ -370,7 +370,7 @@
         app:layout_constraintHorizontal_bias="0.247"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.884"
+        app:layout_constraintVertical_bias="0.93"
         app:srcCompat="@drawable/pieza4" />
 
 
