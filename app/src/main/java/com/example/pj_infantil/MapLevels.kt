@@ -43,15 +43,15 @@ class MapLevels: AppCompatActivity() {
         }
 
         level3Button.setOnClickListener {
+            val intent = Intent(this, levLabyrinth::class.java)
+            startActivity(intent)
+        }
+
+        level4Button.setOnClickListener {
             val intent = Intent(this, level1diferencias::class.java)
             startActivity(intent)
         }
 /*
-        level4Button.setOnClickListener {
-            val intent = Intent(this, level4memory::class.java)
-            startActivity(intent)
-        }
-
         level5Button.setOnClickListener {
             val intent = Intent(this, level5memory::class.java)
             startActivity(intent)
