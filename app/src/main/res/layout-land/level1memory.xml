@@ -7,7 +7,7 @@
     tools:ignore="MissingDefaultResource">
 
     <ImageView
-        android:id="@+id/BackGroundLevelColors1"
+        android:id="@+id/PickColorLev1BackgroundGeneral"
         android:layout_width="1353dp"
         android:layout_height="861dp"
         app:srcCompat="@drawable/bosque_hadas_colores_vivos_445983_743"

@@ -6,32 +6,72 @@ import android.os.Build
 import android.os.Bundle
 import android.view.View
 import android.view.WindowInsets
-import android.view.WindowManager
-import android.widget.Button
+import android.widget.ImageView
 
 class MapLevels: AppCompatActivity() {
+
+    private lateinit var level1Button: ImageView
+    private lateinit var level2Button: ImageView
+    private lateinit var level3Button: ImageView
+    private lateinit var level4Button: ImageView
+    private lateinit var level5Button: ImageView
+    private lateinit var level6Button: ImageView
+    private lateinit var level7Button: ImageView
+    private lateinit var level8Button: ImageView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        fun hideSystemUI() {
+        setContentView(R.layout.firsts_levels)
 
-            setContentView(R.layout.firsts_levels)
+        level1Button = findViewById(R.id.level1)
+        level2Button = findViewById(R.id.level2)
+        level3Button = findViewById(R.id.level3)
+        level4Button = findViewById(R.id.level4)
+        level5Button = findViewById(R.id.level5)
+        level6Button = findViewById(R.id.level6)
+        level7Button = findViewById(R.id.level7)
+        level8Button = findViewById(R.id.level8)
 
+        level1Button.setOnClickListener {
+            val intent = Intent(this, lev1Activity::class.java)
+            startActivity(intent)
+        }
+/*
+        level2Button.setOnClickListener {
+            val intent = Intent(this, level2memory::class.java)
+            startActivity(intent)
         }
 
-        window.decorView.systemUiVisibility = (
-                View.SYSTEM_UI_FLAG_IMMERSIVE
-                        or View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                        or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-                        or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                        or View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
-                        or View.SYSTEM_UI_FLAG_FULLSCREEN
-                        or View.SYSTEM_UI_FLAG_LOW_PROFILE
-                        or View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
-                )
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-            // Ocultar la barra de gestos en dispositivos con Android 11 y superior
-            window.insetsController?.hide(WindowInsets.Type.navigationBars())
+        level3Button.setOnClickListener {
+            val intent = Intent(this, level3memory::class.java)
+            startActivity(intent)
         }
+
+        level4Button.setOnClickListener {
+            val intent = Intent(this, level4memory::class.java)
+            startActivity(intent)
+        }
+
+        level5Button.setOnClickListener {
+            val intent = Intent(this, level5memory::class.java)
+            startActivity(intent)
+        }
+
+        level6Button.setOnClickListener {
+            val intent = Intent(this, level6memory::class.java)
+            startActivity(intent)
+        }
+
+        level7Button.setOnClickListener {
+            val intent = Intent(this, level7memory::class.java)
+            startActivity(intent)
+        }
+
+        level8Button.setOnClickListener {
+            val intent = Intent(this, level8memory::class.java)
+            startActivity(intent)
+        }
+*/
+
     }
 }
