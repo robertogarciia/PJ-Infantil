@@ -15,6 +15,8 @@ class historia : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.historia)
 
+
+        //activity per veure el video de la historia
         val videoView = findViewById<VideoView>(R.id.xml_video_view)
         val packageName = "android.resource://" + packageName + "/" + R.raw.historia
         val uri = Uri.parse(packageName)

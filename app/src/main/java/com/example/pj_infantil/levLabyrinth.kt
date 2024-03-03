@@ -29,16 +29,9 @@ class levLabyrinth : AppCompatActivity() {
 
             // Obtenir la referència de la vista "DrawingView"
             val drawingView = findViewById<DrawingView>(R.id.dibuixar)
+
             // Verificar si s'ha dibuixat alguna cosa a la vista
-            if (drawingView.hasDrawn()) {
-                // Crear un intent per iniciar el MainActivity
-                val intent = Intent(this, MainActivity::class.java)
-                // Iniciar l'activitat
-                startActivity(intent)
-            } else {
-                // Mostre un missatge indicant que no s'ha dibuixat res
-                Toast.makeText(this, "No s'ha dibuixat res", Toast.LENGTH_SHORT).show()
-            }
+
         }
 
 
@@ -78,7 +71,7 @@ class levLabyrinth : AppCompatActivity() {
                 MotionEvent.ACTION_MOVE -> {
                     path.lineTo(xPos, yPos)
 
-                    // Verificar si la línea está dentro del rango especificado
+                    // Verificar si la linea esta dins el rang
                     if (isLineInRange(xPos, yPos)) {
                         showGameWonDialog()
                     }
@@ -87,19 +80,19 @@ class levLabyrinth : AppCompatActivity() {
                 else -> return false
             }
 
-            // Invalidar para desencadenar un redibujo
+            // Invalidar la vista per forçar el redibuix
             invalidate()
             return true
         }
 
         private fun isLineInRange(xPos: Float, yPos: Float): Boolean {
-            // Definir el rango en el eje x y el eje y
+            // si l'usuari entra a aquest rang surt el dialogue per que has guanyat per facilitar el joc
             val minX = 1750f
             val maxX = 2000f
             val minYX = 750f
             val maxYX = 1200f
 
-            // Verificar si la línea está dentro del rango
+            // Verificar si la línea esta dins els rangs especificats
             return xPos in minX..maxX && yPos >= minYX && yPos <= maxYX
         }
         private fun showGameWonDialog() {

@@ -30,6 +30,7 @@ class level1diferencias : AppCompatActivity() {
         setContentView(R.layout.level1diferencias)
 
         game()
+        //boto per tornar al mapa de nivells
         homeBacklevel = findViewById(R.id.IVBackLevels)
 
         homeBacklevel.setOnClickListener {
@@ -40,6 +41,8 @@ class level1diferencias : AppCompatActivity() {
     }
 
     private fun initializeGame() {
+
+
         // Inicializar las vistas después de setContentView
         ardilla1ImageView = findViewById(R.id.ardilla1)
         ardilla2ImageView = findViewById(R.id.ardilla2)
@@ -95,6 +98,7 @@ class level1diferencias : AppCompatActivity() {
     }
 
     private fun onCardClicked(num: Int? = null) {
+        //aqui es mostren els checks de les diferencies en el cas de ser tocades per l'usuari
         if (num == 1) {
             checkFlor.visibility = View.VISIBLE
         } else if (num == 2) {
