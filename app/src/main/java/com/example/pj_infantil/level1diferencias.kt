@@ -4,13 +4,9 @@ import android.app.AlertDialog
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.widget.ImageView
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
 
 class level1diferencias : AppCompatActivity() {
 
@@ -25,6 +21,7 @@ class level1diferencias : AppCompatActivity() {
     private lateinit var checkGorra: ImageView
     private lateinit var checkSol: ImageView
     private lateinit var checkFlor: ImageView
+    private lateinit var homeBacklevel : ImageView
 
     var final: Boolean = false
 
@@ -33,6 +30,12 @@ class level1diferencias : AppCompatActivity() {
         setContentView(R.layout.level1diferencias)
 
         game()
+        homeBacklevel = findViewById(R.id.IVBackLevels)
+
+        homeBacklevel.setOnClickListener {
+            val intent = Intent(this, MapLevels::class.java)
+            startActivity(intent)
+        }
 
     }
 

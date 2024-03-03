@@ -13,6 +13,7 @@ class lev1Activity : AppCompatActivity() {
     private var previousColor: String? = null
     private lateinit var correctColor: String
     private var contador: Int = 0
+    private lateinit  var homebacklevel1 : ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,6 +26,12 @@ class lev1Activity : AppCompatActivity() {
         val colorGreen: ImageView = findViewById(R.id.PickColorLev1BackgroundGeneral)
         val colorPurple: ImageView = findViewById(R.id.PickColorPurpleLev1)
         contadorTextView = findViewById(R.id.ContadorTv)
+        homebacklevel1 = findViewById(R.id.HomeBackLevelMenu)
+
+        homebacklevel1.setOnClickListener {
+            val intent = Intent(this, MapLevels::class.java)
+            startActivity(intent)
+        }
 
         // Inicializar el juego
         startGame()

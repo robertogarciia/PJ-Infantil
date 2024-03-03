@@ -14,10 +14,18 @@ import androidx.appcompat.app.AppCompatActivity
 
 class levLabyrinth : AppCompatActivity() {
 
+    private lateinit var homebacklevel3 : ImageView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.levlabyrinth)
 
+        homebacklevel3 = findViewById(R.id.HomeBackLevelMenuLabyrinth)
+
+        homebacklevel3.setOnClickListener {
+            val intent = Intent(this, MapLevels::class.java)
+            startActivity(intent)
+        }
 
             // Obtenir la referència de la vista "DrawingView"
             val drawingView = findViewById<DrawingView>(R.id.dibuixar)
