@@ -9,6 +9,7 @@ import android.view.MotionEvent
 import android.view.View
 import android.widget.ImageView
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 
 class levLabyrinth : AppCompatActivity() {
@@ -68,14 +69,42 @@ class levLabyrinth : AppCompatActivity() {
 
                 MotionEvent.ACTION_MOVE -> {
                     path.lineTo(xPos, yPos)
+
+                    // Verificar si la línea está dentro del rango especificado
+                    if (isLineInRange(xPos, yPos)) {
+                        showGameWonDialog()
+                    }
                 }
 
                 else -> return false
             }
 
-            // Invalida per desencadenar un redibuix
+            // Invalidar para desencadenar un redibujo
             invalidate()
             return true
+        }
+
+        private fun isLineInRange(xPos: Float, yPos: Float): Boolean {
+            // Definir el rango en el eje x y el eje y
+            val minX = 1750f
+            val maxX = 2000f
+            val minYX = 750f
+            val maxYX = 1200f
+
+            // Verificar si la línea está dentro del rango
+            return xPos in minX..maxX && yPos >= minYX && yPos <= maxYX
+        }
+        private fun showGameWonDialog() {
+            val builder = AlertDialog.Builder(context)
+            builder.setTitle("¡Felicitats!")
+            builder.setMessage("¡Has guanyat!")
+            builder.setPositiveButton("Tornar al mapa de nivells") { dialog, _ ->
+                val intent = Intent(context, MapLevels::class.java)
+                context.startActivity(intent)
+                dialog.dismiss()
+            }
+            builder.setCancelable(false)
+            builder.create().show()
         }
 
         fun hasDrawn(): Boolean {
