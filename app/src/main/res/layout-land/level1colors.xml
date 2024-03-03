@@ -126,8 +126,8 @@
 
     <ImageView
         android:id="@+id/PickColorBlueLev1"
-        android:layout_width="285dp"
-        android:layout_height="172dp"
+        android:layout_width="370dp"
+        android:layout_height="153dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline19"
         app:layout_constraintStart_toStartOf="@+id/guideline17"
