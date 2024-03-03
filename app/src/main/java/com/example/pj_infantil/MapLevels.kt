@@ -8,6 +8,7 @@ import android.view.View
 import android.view.WindowInsets
 import android.widget.ImageView
 
+
 class MapLevels: AppCompatActivity() {
 
     private lateinit var level1Button: ImageView
@@ -51,17 +52,17 @@ class MapLevels: AppCompatActivity() {
             val intent = Intent(this, level1diferencias::class.java)
             startActivity(intent)
         }
-/*
+
         level5Button.setOnClickListener {
-            val intent = Intent(this, level5memory::class.java)
+            val intent = Intent(this, levAnswerCharacters::class.java)
             startActivity(intent)
         }
 
         level6Button.setOnClickListener {
-            val intent = Intent(this, level6memory::class.java)
+            val intent = Intent(this, level1puzzle::class.java)
             startActivity(intent)
         }
-
+/*
         level7Button.setOnClickListener {
             val intent = Intent(this, level7memory::class.java)
             startActivity(intent)
