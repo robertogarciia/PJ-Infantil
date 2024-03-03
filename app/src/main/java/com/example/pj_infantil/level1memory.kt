@@ -14,6 +14,7 @@ class level1memory : AppCompatActivity() {
 
     private lateinit var cards: List<ImageButton>
     private lateinit var initialImages: List<ImageView>
+    private lateinit var homebacklevel2 : ImageView
 
     // Propiedades para las imágenes iniciales
     private lateinit var par1_1: ImageView
@@ -41,6 +42,13 @@ class level1memory : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.level1memory)
         game()
+
+        homebacklevel2 = findViewById(R.id.HomeBackLevelMenuMemory)
+
+        homebacklevel2.setOnClickListener {
+            val intent = Intent(this, MapLevels::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun initializeGame() {

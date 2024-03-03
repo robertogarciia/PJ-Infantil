@@ -14,6 +14,7 @@ class level1puzzle : AppCompatActivity() {
 
     private lateinit var cards: List<ImageButton>
     private lateinit var initialImages: List<ImageView>
+    private lateinit var homebacklevel6 : ImageView
 
     // Propiedades para las imágenes iniciales
     private lateinit var par1_1: ImageView
@@ -38,9 +39,14 @@ class level1puzzle : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.level1memory)
+        setContentView(R.layout.puzzlelev1)
 
+        homebacklevel6 = findViewById(R.id.HomeBackLevelMenu)
 
+        homebacklevel6.setOnClickListener {
+            val intent = Intent(this, MapLevels::class.java)
+            startActivity(intent)
+        }
 
         // Inicializar las vistas después de setContentView
         cards = listOf(
