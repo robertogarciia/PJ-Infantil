@@ -12,30 +12,53 @@ import com.example.pj_infantil.R
 
 class level1puzzle : AppCompatActivity() {
 
-    private lateinit var cards: List<ImageButton>
-    private lateinit var initialImages: List<ImageView>
+    private lateinit var piezas: List<ImageButton>
+    private lateinit var sitios: List<ImageView>
+    private lateinit var piezasPuestas: List<ImageView>
     private lateinit var homebacklevel6 : ImageView
 
     // Propiedades para las imágenes iniciales
-    private lateinit var par1_1: ImageView
-    private lateinit var par1_2: ImageView
-    private lateinit var par2_1: ImageView
-    private lateinit var par2_2: ImageView
-    private lateinit var par3_1: ImageView
-    private lateinit var par3_2: ImageView
-    private lateinit var par4_1: ImageView
-    private lateinit var par4_2: ImageView
+    private lateinit var p1s1: ImageView
+    private lateinit var p1s2: ImageView
+    private lateinit var p1s3: ImageView
+    private lateinit var p1s4: ImageView
 
-    private lateinit var madera1: ImageButton
-    private lateinit var madera2: ImageButton
-    private lateinit var madera3: ImageButton
-    private lateinit var madera4: ImageButton
-    private lateinit var madera5: ImageButton
-    private lateinit var madera6: ImageButton
-    private lateinit var madera7: ImageButton
-    private lateinit var madera8: ImageButton
-    var par1: String? = null
-    var par2: String? = null
+    private lateinit var p2s1: ImageView
+    private lateinit var p2s2: ImageView
+    private lateinit var p2s3: ImageView
+    private lateinit var p2s4: ImageView
+
+    private lateinit var p3s1: ImageView
+    private lateinit var p3s2: ImageView
+    private lateinit var p3s3: ImageView
+    private lateinit var p3s4: ImageView
+
+    private lateinit var p4s1: ImageView
+    private lateinit var p4s2: ImageView
+    private lateinit var p4s3: ImageView
+    private lateinit var p4s4: ImageView
+
+    private lateinit var p1: ImageButton
+    private lateinit var p2: ImageButton
+    private lateinit var p3: ImageButton
+    private lateinit var p4: ImageButton
+
+    private lateinit var s1: ImageView
+    private lateinit var s2: ImageView
+    private lateinit var s3: ImageView
+    private lateinit var s4: ImageView
+
+    var b_p1: Boolean? = false
+    var b_p2: Boolean? = false
+    var b_p3: Boolean? = false
+    var b_p4: Boolean? = false
+
+    var b_s1: Boolean? = false
+    var b_s2: Boolean? = false
+    var b_s3: Boolean? = false
+    var b_s4: Boolean? = false
+
+    var final: Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,123 +71,272 @@ class level1puzzle : AppCompatActivity() {
             startActivity(intent)
         }
 
-        // Inicializar las vistas después de setContentView
-        cards = listOf(
-            findViewById(R.id.madera_1),
-            findViewById(R.id.madera_2),
-            findViewById(R.id.madera_3),
-            findViewById(R.id.madera_4),
-            findViewById(R.id.madera_5),
-            findViewById(R.id.madera_6),
-            findViewById(R.id.madera_7),
-            findViewById(R.id.madera_8)
-        )
-
-        initialImages = listOf(
-            findViewById(R.id.par1_1),
-            findViewById(R.id.par1_2),
-            findViewById(R.id.par2_1),
-            findViewById(R.id.par2_2),
-            findViewById(R.id.par3_1),
-            findViewById(R.id.par3_2),
-            findViewById(R.id.par4_1),
-            findViewById(R.id.par4_2)
-        )
-
-        madera1 = cards[0]
-        madera2 = cards[1]
-        madera3 = cards[2]
-        madera4 = cards[3]
-        madera5 = cards[4]
-        madera6 = cards[5]
-        madera7 = cards[6]
-        madera8 = cards[7]
-
-        par1_1 = initialImages[0]
-        par1_2 = initialImages[1]
-        par2_1 = initialImages[2]
-        par2_2 = initialImages[3]
-        par3_1 = initialImages[4]
-        par3_2 = initialImages[5]
-        par4_1 = initialImages[6]
-        par4_2 = initialImages[7]
-
-        // Hacer invisible la imagen par1_1
-        par1_1.visibility = View.INVISIBLE
-        par1_2.visibility = View.INVISIBLE
-        par2_1.visibility = View.INVISIBLE
-        par2_2.visibility = View.INVISIBLE
-        par3_1.visibility = View.INVISIBLE
-        par3_2.visibility = View.INVISIBLE
-        par4_1.visibility = View.INVISIBLE
-        par4_2.visibility = View.INVISIBLE
-
         game()
     }
 
+    private fun initializeGame() {
+        // Inicializar las vistas después de setContentView
+        piezas = listOf(
+            findViewById(R.id.pieza1),
+            findViewById(R.id.pieza2),
+            findViewById(R.id.pieza3),
+            findViewById(R.id.pieza4),
+        )
+
+        sitios = listOf(
+            findViewById(R.id.sitio1),
+            findViewById(R.id.sitio2),
+            findViewById(R.id.sitio3),
+            findViewById(R.id.sitio4),
+        )
+
+        piezasPuestas = listOf(
+            findViewById(R.id.pieza1_sitio1),
+            findViewById(R.id.pieza1_sitio2),
+            findViewById(R.id.pieza1_sitio3),
+            findViewById(R.id.pieza1_sitio4),
+
+            findViewById(R.id.pieza2_sitio1),
+            findViewById(R.id.pieza2_sitio2),
+            findViewById(R.id.pieza2_sitio3),
+            findViewById(R.id.pieza2_sitio4),
+
+            findViewById(R.id.pieza3_sitio1),
+            findViewById(R.id.pieza3_sitio2),
+            findViewById(R.id.pieza3_sitio3),
+            findViewById(R.id.pieza3_sitio4),
+
+            findViewById(R.id.pieza4_sitio1),
+            findViewById(R.id.pieza4_sitio2),
+            findViewById(R.id.pieza4_sitio3),
+            findViewById(R.id.pieza4_sitio4),
+        )
+
+        // Inicializar las imágenes que hay dentro del cuadro del puzzle
+        //piezas1
+        p1 = piezas[0]
+        s1 = sitios[0]
+        p1s1 = piezasPuestas[0]
+        p1s2 = piezasPuestas[1]
+        p1s3 = piezasPuestas[2]
+        p1s4 = piezasPuestas[3]
+
+        //piezas2
+        p2 = piezas[1]
+        s2 = sitios[1]
+        p2s1 = piezasPuestas[4]
+        p2s2 = piezasPuestas[5]
+        p2s3 = piezasPuestas[6]
+        p2s4 = piezasPuestas[7]
+
+        //piezas3
+        p3 = piezas[2]
+        s3 = sitios[2]
+        p3s1 = piezasPuestas[8]
+        p3s2 = piezasPuestas[9]
+        p3s3 = piezasPuestas[10]
+        p3s4 = piezasPuestas[11]
+
+        //piezas4
+        p4 = piezas[3]
+        s4 = sitios[3]
+        p4s1 = piezasPuestas[12]
+        p4s2 = piezasPuestas[13]
+        p4s3 = piezasPuestas[14]
+        p4s4 = piezasPuestas[15]
+
+        // Hacer invisible las imagenes dentro del cuadro del puzzle
+        p1s1.visibility = View.INVISIBLE
+        p1s2.visibility = View.INVISIBLE
+        p1s3.visibility = View.INVISIBLE
+        p1s4.visibility = View.INVISIBLE
+
+        p2s1.visibility = View.INVISIBLE
+        p2s2.visibility = View.INVISIBLE
+        p2s3.visibility = View.INVISIBLE
+        p2s4.visibility = View.INVISIBLE
+
+        p3s1.visibility = View.INVISIBLE
+        p3s2.visibility = View.INVISIBLE
+        p3s3.visibility = View.INVISIBLE
+        p3s4.visibility = View.INVISIBLE
+
+        p4s1.visibility = View.INVISIBLE
+        p4s2.visibility = View.INVISIBLE
+        p4s3.visibility = View.INVISIBLE
+        p4s4.visibility = View.INVISIBLE
+    }
+
+    private val handler = Handler()
+
     fun game() {
+        initializeGame()
+        setCardClickListeners()
+        checkGameCompletion()
+    }
 
-        if (par1_1.visibility == View.VISIBLE && par1_2.visibility == View.VISIBLE &&
-            par2_1.visibility == View.VISIBLE && par2_2.visibility == View.VISIBLE &&
-            par3_1.visibility == View.VISIBLE && par3_2.visibility == View.VISIBLE &&
-            par4_1.visibility == View.VISIBLE && par4_2.visibility == View.VISIBLE)
-        {
-            showCompletionDialog()
-            par1 = 1.toString()
+/*    private fun resetGame() {
+        p1.visibility = View.VISIBLE
+        p2.visibility = View.VISIBLE
+        p3.visibility = View.VISIBLE
+        p4.visibility = View.VISIBLE
 
-        }else{
-            madera1.setOnClickListener {
-                onCardClicked(par1_1,"par1", "par1")
+        p1s1.visibility = View.INVISIBLE
+        p1s2.visibility = View.INVISIBLE
+        p1s3.visibility = View.INVISIBLE
+        p1s4.visibility = View.INVISIBLE
+
+        p2s1.visibility = View.INVISIBLE
+        p2s2.visibility = View.INVISIBLE
+        p2s3.visibility = View.INVISIBLE
+        p2s4.visibility = View.INVISIBLE
+
+        p3s1.visibility = View.INVISIBLE
+        p3s2.visibility = View.INVISIBLE
+        p3s3.visibility = View.INVISIBLE
+        p3s4.visibility = View.INVISIBLE
+
+        p4s1.visibility = View.INVISIBLE
+        p4s2.visibility = View.INVISIBLE
+        p4s3.visibility = View.INVISIBLE
+        p4s4.visibility = View.INVISIBLE
+
+        b_p1 = false
+        b_p2 = false
+        b_p3 = false
+        b_p4 = false
+
+        b_s1 = false
+        b_s2 = false
+        b_s3 = false
+        b_s4 = false
+
+        final = false
+
+        setCardClickListeners()
+    } */
+
+    private fun checkGameCompletion() {
+        handler.postDelayed({
+            if (!final) {
+                if (checkCardsVisibility() && checkSitioBooleans()) {
+                    showCompletionDialog()
+                } else {
+                    checkGameCompletion()
+                }
             }
-            madera2.setOnClickListener {
-                onCardClicked(par2_1,"par2", "par2")
-            }
-            madera3.setOnClickListener {
-                onCardClicked(par3_1,"par3", "par3")
-            }
-            madera4.setOnClickListener {
-                onCardClicked(par4_2,"par4", "par4")
-            }
-            madera5.setOnClickListener {
-                onCardClicked(par4_1,"par4", "par4")
-            }
-            madera6.setOnClickListener {
-                onCardClicked(par2_2,"par2", "par2")
-            }
-            madera7.setOnClickListener {
-                onCardClicked(par1_2,"par1", "par1")
-            }
-            madera8.setOnClickListener {
-                onCardClicked(par3_2,"par3", "par3")
-            }
+        }, 100)
+    }
+
+    private fun checkSitioBooleans(): Boolean {
+        return (b_s1 == true && b_s2 == true && b_s3 == true && b_s4 == true)
+    }
+
+    private fun checkCardsVisibility(): Boolean {
+        return (p1s1.visibility == View.VISIBLE &&
+                p2s2.visibility == View.VISIBLE &&
+                p3s3.visibility == View.VISIBLE &&
+                p4s4.visibility == View.VISIBLE)
+    }
+
+
+    private fun setCardClickListeners() {
+        p1.setOnClickListener { onCardClicked(1) }
+        p2.setOnClickListener { onCardClicked(2) }
+        p3.setOnClickListener { onCardClicked(3) }
+        p4.setOnClickListener { onCardClicked(4) }
+    }
+
+    private fun onCardClicked(num: Int? = null) {
+        if (num == 1) {
+            p1.visibility = View.INVISIBLE
+            b_p1 = true
+            setSitioClickListeners()
+        } else if (num == 2) {
+            p2.visibility = View.INVISIBLE
+            b_p2 = true
+            setSitioClickListeners()
+        } else if (num == 3) {
+            p3.visibility = View.INVISIBLE
+            b_p3 = true
+            setSitioClickListeners()
+        } else if (num == 4) {
+            p4.visibility = View.INVISIBLE
+            b_p4 = true
+            setSitioClickListeners()
         }
     }
 
-    private fun onCardClicked(card: ImageView, primeraCard: String? = null , segundaCard: String? = null) {
-        if (par1 == null) {
-            card.visibility = View.VISIBLE
-            par1 = primeraCard
-        } else {
-            par2 = segundaCard
-            if (par1 == par2) {
-                card.visibility = View.VISIBLE
-                par1 = null
-                par2 = null
-            } else {
-                initialImages.forEach {
-                    it.visibility = View.INVISIBLE
-                }
-                par1 = null
-                par2 = null
-            }
+    private fun setSitioClickListeners() {
+        s1.setOnClickListener { onSitioClicked(1) }
+        s2.setOnClickListener { onSitioClicked(2) }
+        s3.setOnClickListener { onSitioClicked(3) }
+        s4.setOnClickListener { onSitioClicked(4) }
+    }
 
+    private fun onSitioClicked(num: Int? = null) {
+        if (b_p1 == true && num == 1) { // Si la pieza 1 está seleccionada
+            p1s1.visibility = View.VISIBLE
+            b_p1 = false
+            b_s1 = true
+        } else if (b_p1 == true && num == 2) {
+            p1s2.visibility = View.VISIBLE
+            b_p1 = false
+        } else if (b_p1 == true && num == 3) {
+            p1s3.visibility = View.VISIBLE
+            b_p1 = false
+        } else if (b_p1 == true && num == 4) {
+            p1s4.visibility = View.VISIBLE
+            b_p1 = false
+
+        } else if (b_p2 == true && num == 1) { // Si la pieza 2 está seleccionada
+            p2s1.visibility = View.VISIBLE
+            b_p2 = false
+        } else if (b_p2 == true && num == 2) {
+            p2s2.visibility = View.VISIBLE
+            b_p2 = false
+            b_s2 = true
+        } else if (b_p2 == true && num == 3) {
+            p2s3.visibility = View.VISIBLE
+            b_p2 = false
+        } else if (b_p2 == true && num == 4) {
+            p2s4.visibility = View.VISIBLE
+            b_p2 = false
+
+        } else if (b_p3 == true && num == 1) { // Si la pieza 3 está seleccionada
+            p3s1.visibility = View.VISIBLE
+            b_p3 = false
+        } else if (b_p3 == true && num == 2) {
+            p3s2.visibility = View.VISIBLE
+            b_p3 = false
+        } else if (b_p3 == true && num == 3) {
+            p3s3.visibility = View.VISIBLE
+            b_p3 = false
+            b_s3 = true
+        } else if (b_p3 == true && num == 4) {
+            p3s4.visibility = View.VISIBLE
+            b_p3 = false
+
+        } else if (b_p4 == true && num == 1) { // Si la pieza 4 está seleccionada
+            p4s1.visibility = View.VISIBLE
+            b_p4 = false
+        } else if (b_p4 == true && num == 2) {
+            p4s2.visibility = View.VISIBLE
+            b_p4 = false
+        } else if (b_p4 == true && num == 3) {
+            p4s3.visibility = View.VISIBLE
+            b_p4 = false
+        } else if (b_p4 == true && num == 4) {
+            p4s4.visibility = View.VISIBLE
+            b_p4 = false
+            b_s4 = true
         }
     }
 
     private fun showCompletionDialog() {
         val builder = AlertDialog.Builder(this)
         builder.setTitle("¡MOLT BÉ!")
-        builder.setMessage("HAS ACABAT EL JOC DEL MEMORI.")
+        builder.setMessage("HAS ACABAT EL JOC DEL PUZZLE.")
         builder.setPositiveButton("ACCEPTAR") { dialog, _ ->
             dialog.dismiss()
             val intent = Intent(this, MainActivity::class.java)
