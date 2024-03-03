@@ -35,13 +35,15 @@ class level1memory : AppCompatActivity() {
     private lateinit var madera8: ImageButton
     var par1: String? = null
     var par2: String? = null
+    var final: Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.level1memory)
+        game()
+    }
 
-
-
+    private fun initializeGame() {
         // Inicializar las vistas después de setContentView
         cards = listOf(
             findViewById(R.id.madera_1),
@@ -92,49 +94,48 @@ class level1memory : AppCompatActivity() {
         par3_2.visibility = View.INVISIBLE
         par4_1.visibility = View.INVISIBLE
         par4_2.visibility = View.INVISIBLE
-
-        game()
     }
 
-    fun game() {
+    private val handler = Handler()
 
-        if (par1_1.visibility == View.VISIBLE && par1_2.visibility == View.VISIBLE &&
-            par2_1.visibility == View.VISIBLE && par2_2.visibility == View.VISIBLE &&
-            par3_1.visibility == View.VISIBLE && par3_2.visibility == View.VISIBLE &&
-            par4_1.visibility == View.VISIBLE && par4_2.visibility == View.VISIBLE)
-        {
-            showCompletionDialog()
-            par1 = 1.toString()
-
-        }else{
-            madera1.setOnClickListener {
-                onCardClicked(par1_1,"par1", "par1")
-            }
-            madera2.setOnClickListener {
-                onCardClicked(par2_1,"par2", "par2")
-            }
-            madera3.setOnClickListener {
-                onCardClicked(par3_1,"par3", "par3")
-            }
-            madera4.setOnClickListener {
-                onCardClicked(par4_2,"par4", "par4")
-            }
-            madera5.setOnClickListener {
-                onCardClicked(par4_1,"par4", "par4")
-            }
-            madera6.setOnClickListener {
-                onCardClicked(par2_2,"par2", "par2")
-            }
-            madera7.setOnClickListener {
-                onCardClicked(par1_2,"par1", "par1")
-            }
-            madera8.setOnClickListener {
-                onCardClicked(par3_2,"par3", "par3")
-            }
-        }
+    private fun game() {
+        initializeGame()
+        setCardClickListeners()
+        checkGameCompletion()
     }
 
-    private fun onCardClicked(card: ImageView, primeraCard: String? = null , segundaCard: String? = null) {
+    private fun checkGameCompletion() {
+        handler.postDelayed({
+            if (!final) {
+                if (checkCardsVisibility()) {
+                    showCompletionDialog()
+                } else {
+                    checkGameCompletion()
+                }
+            }
+        }, 100) // Ajusta el tiempo según sea necesario
+    }
+
+    private fun checkCardsVisibility(): Boolean {
+        return (par1_1.visibility == View.VISIBLE && par1_2.visibility == View.VISIBLE &&
+                par2_1.visibility == View.VISIBLE && par2_2.visibility == View.VISIBLE &&
+                par3_1.visibility == View.VISIBLE && par3_2.visibility == View.VISIBLE &&
+                par4_1.visibility == View.VISIBLE && par4_2.visibility == View.VISIBLE)
+    }
+
+
+    private fun setCardClickListeners() {
+        madera1.setOnClickListener { onCardClicked(par1_1, "par1", "par1") }
+        madera2.setOnClickListener { onCardClicked(par2_1, "par2", "par2") }
+        madera3.setOnClickListener { onCardClicked(par3_1, "par3", "par3") }
+        madera4.setOnClickListener { onCardClicked(par4_2, "par4", "par4") }
+        madera5.setOnClickListener { onCardClicked(par4_1, "par4", "par4") }
+        madera6.setOnClickListener { onCardClicked(par2_2, "par2", "par2") }
+        madera7.setOnClickListener { onCardClicked(par1_2, "par1", "par1") }
+        madera8.setOnClickListener { onCardClicked(par3_2, "par3", "par3") }
+    }
+
+    private fun onCardClicked(card: ImageView, primeraCard: String? = null, segundaCard: String? = null) {
         if (par1 == null) {
             card.visibility = View.VISIBLE
             par1 = primeraCard
@@ -151,7 +152,6 @@ class level1memory : AppCompatActivity() {
                 par1 = null
                 par2 = null
             }
-
         }
     }
 
