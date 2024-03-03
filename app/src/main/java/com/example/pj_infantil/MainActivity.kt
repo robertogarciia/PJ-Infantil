@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
 
         buttonHistoryMenuPrincipal.setOnClickListener {
 
-            val intent = Intent(this, SecundaryMenu::class.java)
+            val intent = Intent(this, historia::class.java)
             startActivity(intent)
         }
 
