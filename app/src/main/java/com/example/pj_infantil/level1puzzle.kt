@@ -58,6 +58,11 @@ class level1puzzle : AppCompatActivity() {
     var b_s3: Boolean? = false
     var b_s4: Boolean? = false
 
+    var b_cs1: Boolean? = false
+    var b_cs2: Boolean? = false
+    var b_cs3: Boolean? = false
+    var b_cs4: Boolean? = false
+
     var final: Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -175,7 +180,7 @@ class level1puzzle : AppCompatActivity() {
         checkGameCompletion()
     }
 
-/*    private fun resetGame() {
+    private fun resetGame() {
         p1.visibility = View.VISIBLE
         p2.visibility = View.VISIBLE
         p3.visibility = View.VISIBLE
@@ -211,16 +216,25 @@ class level1puzzle : AppCompatActivity() {
         b_s3 = false
         b_s4 = false
 
+        b_cs1 = false
+        b_cs2 = false
+        b_cs3 = false
+        b_cs4 = false
+
         final = false
 
         setCardClickListeners()
-    } */
+    }
 
     private fun checkGameCompletion() {
         handler.postDelayed({
             if (!final) {
-                if (checkCardsVisibility() && checkSitioBooleans()) {
-                    showCompletionDialog()
+                if (checkSitioBooleans()) {
+                    if (b_cs1 == true && b_cs2 == true && b_cs3 == true && b_cs4 == true) {
+                        showCompletionDialog()
+                    } else {
+                        resetGame()
+                    }
                 } else {
                     checkGameCompletion()
                 }
@@ -230,13 +244,6 @@ class level1puzzle : AppCompatActivity() {
 
     private fun checkSitioBooleans(): Boolean {
         return (b_s1 == true && b_s2 == true && b_s3 == true && b_s4 == true)
-    }
-
-    private fun checkCardsVisibility(): Boolean {
-        return (p1s1.visibility == View.VISIBLE &&
-                p2s2.visibility == View.VISIBLE &&
-                p3s3.visibility == View.VISIBLE &&
-                p4s4.visibility == View.VISIBLE)
     }
 
 
@@ -278,57 +285,73 @@ class level1puzzle : AppCompatActivity() {
         if (b_p1 == true && num == 1) { // Si la pieza 1 está seleccionada
             p1s1.visibility = View.VISIBLE
             b_p1 = false
+            b_cs1 = true
             b_s1 = true
         } else if (b_p1 == true && num == 2) {
             p1s2.visibility = View.VISIBLE
             b_p1 = false
+            b_s1 = true
         } else if (b_p1 == true && num == 3) {
             p1s3.visibility = View.VISIBLE
             b_p1 = false
+            b_s1 = true
         } else if (b_p1 == true && num == 4) {
             p1s4.visibility = View.VISIBLE
             b_p1 = false
+            b_s1 = true
 
         } else if (b_p2 == true && num == 1) { // Si la pieza 2 está seleccionada
             p2s1.visibility = View.VISIBLE
             b_p2 = false
+            b_s2 = true
         } else if (b_p2 == true && num == 2) {
             p2s2.visibility = View.VISIBLE
             b_p2 = false
+            b_cs2 = true
             b_s2 = true
         } else if (b_p2 == true && num == 3) {
             p2s3.visibility = View.VISIBLE
             b_p2 = false
+            b_s2 = true
         } else if (b_p2 == true && num == 4) {
             p2s4.visibility = View.VISIBLE
             b_p2 = false
+            b_s2 = true
 
         } else if (b_p3 == true && num == 1) { // Si la pieza 3 está seleccionada
             p3s1.visibility = View.VISIBLE
             b_p3 = false
+            b_s3 = true
         } else if (b_p3 == true && num == 2) {
             p3s2.visibility = View.VISIBLE
             b_p3 = false
+            b_s3 = true
         } else if (b_p3 == true && num == 3) {
             p3s3.visibility = View.VISIBLE
             b_p3 = false
+            b_cs3 = true
             b_s3 = true
         } else if (b_p3 == true && num == 4) {
             p3s4.visibility = View.VISIBLE
             b_p3 = false
+            b_s3 = true
 
         } else if (b_p4 == true && num == 1) { // Si la pieza 4 está seleccionada
             p4s1.visibility = View.VISIBLE
             b_p4 = false
+            b_s4 = true
         } else if (b_p4 == true && num == 2) {
             p4s2.visibility = View.VISIBLE
             b_p4 = false
+            b_s4 = true
         } else if (b_p4 == true && num == 3) {
             p4s3.visibility = View.VISIBLE
             b_p4 = false
+            b_s4 = true
         } else if (b_p4 == true && num == 4) {
             p4s4.visibility = View.VISIBLE
             b_p4 = false
+            b_cs4 = true
             b_s4 = true
         }
     }
