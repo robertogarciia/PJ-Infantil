@@ -71,12 +71,12 @@ class lev2colors : AppCompatActivity() {
 
     private fun checkColor(imageView: ImageView) {
         // Obtener el color asociado a la imagen
-        val selectedColor = getColorForImageView(imageView)
+        val selectedColors = getColorForImageView(imageView)
 
-        if (correctColor.equals(selectedColor, ignoreCase = true)) {
+        if (correctColor in selectedColors) {
             contador += 1
         } else {
-
+            // Lógica para cuando el color seleccionado no es correcto
         }
 
         // Actualizar el TextView del contador
@@ -91,30 +91,31 @@ class lev2colors : AppCompatActivity() {
         startGame()
     }
 
+    private fun getColorForImageView(imageView: ImageView): List<String> {
+        // Obtener el color asociado a la imagen
+        return when (imageView.id) {
+            R.id.PickColorBlueLev1 -> listOf("Blau", "Blue", "Azul")
+            R.id.PickColorRedLev1 -> listOf("Vermell", "Red", "Rojo")
+            R.id.PickColorLev1BackgroundGeneral -> listOf("Verd", "Green", "Verde")
+            R.id.PickColorPurpleLev1 -> listOf("Lila", "Purple")
+            R.id.PickColorPinkLev1 -> listOf("Rosa", "Pink")
+            else -> emptyList()
+        }
+    }
+
+
 
     private fun showGameWonDialog() {
-            val builder = AlertDialog.Builder(this)
-            builder.setTitle("¡Felicitats!")
-            builder.setMessage("¡Has guanyat!")
-            builder.setPositiveButton("Tornar al mapa de nivells") { dialog, _ ->
-                val intent = Intent(this, MapLevels::class.java)
-                startActivity(intent)
-                dialog.dismiss()
-            }
-            builder.setCancelable(false)
-            builder.create().show()
+        val builder = AlertDialog.Builder(this)
+        builder.setTitle(R.string.dialogueCongratulations)
+        builder.setMessage(R.string.dialogueYouWin)
+        builder.setPositiveButton(R.string.dialoguereturnmap) { dialog, _ ->
+            val intent = Intent(this, MapLevels::class.java)
+            startActivity(intent)
+            dialog.dismiss()
         }
-
-        private fun getColorForImageView(imageView: ImageView): String {
-            // Obtener el color asociado a la imagen
-            return when (imageView.id) {
-                R.id.PickColorBlueLev1 -> listOf("Blau", "Blue", "Azul").toString()
-                R.id.PickColorRedLev1 -> listOf("Vermell", "Red", "Rojo").toString()
-                R.id.PickColorGreenLev1 -> listOf("Verd", "Green","Verde").toString()
-                R.id.PickColorPurpleLev1 -> listOf("Lila", "Purple").toString()
-                R.id.PickColorPinkLev1 -> listOf("Rosa", "Pink").toString()
-                else -> ""
-            }
-        }
+        builder.setCancelable(false)
+        builder.create().show()
+    }
     }
 

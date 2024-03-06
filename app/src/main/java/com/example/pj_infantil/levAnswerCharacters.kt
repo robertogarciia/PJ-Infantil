@@ -19,6 +19,7 @@ class levAnswerCharacters : AppCompatActivity() {
     private lateinit var btnOption3: ImageView
     private lateinit var btnOption4: ImageView
     private lateinit var contadorTextView: TextView
+    private lateinit var homebacklevel1 : ImageView
 
     private val correctAnswers = intArrayOf(3, 1, 4, 2)
     private var currentImageIndex = 0
@@ -33,12 +34,18 @@ class levAnswerCharacters : AppCompatActivity() {
         btnOption2 = findViewById(R.id.ivcount2)
         btnOption3 = findViewById(R.id.ivcount3)
         btnOption4 = findViewById(R.id.ivcount4)
+        homebacklevel1 = findViewById(R.id.IVBackLevels)
+
         contadorTextView = findViewById(R.id.textViewcontador)
 
         btnOption1.setOnClickListener { checkAnswer(3) }
         btnOption2.setOnClickListener { checkAnswer(1) }
         btnOption3.setOnClickListener { checkAnswer(4) }
         btnOption4.setOnClickListener { checkAnswer(2) }
+        homebacklevel1.setOnClickListener {
+            val intent = Intent(this, MapLevels::class.java)
+            startActivity(intent)
+        }
 
         // Inicia el juego mostrando la primera imagen
         showNextImage()
@@ -91,9 +98,9 @@ class levAnswerCharacters : AppCompatActivity() {
 //dialogue que mostra que has guanyat
     private fun showGameWonDialog() {
         val builder = AlertDialog.Builder(this)
-        builder.setTitle("¡Felicitats!")
-        builder.setMessage("¡HAS GUANYAT EL JOC DE CONTAR!")
-        builder.setPositiveButton("Tornar al mapa de nivells") { dialog, _ ->
+        builder.setTitle(R.string.dialogueCongratulations)
+        builder.setMessage(R.string.dialogueYouWin)
+        builder.setPositiveButton(R.string.dialoguereturnmap) { dialog, _ ->
             val intent = Intent(this, MapLevels::class.java)
             startActivity(intent)
             dialog.dismiss()

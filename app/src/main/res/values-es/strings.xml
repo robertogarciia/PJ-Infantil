@@ -11,4 +11,8 @@
     <string name="colorsGreen">Verde</string>
     <string name="colorsPink">Rosa</string>
 
+    <string name="dialogueCongratulations">Felicidades</string>
+    <string name="dialogueYouWin">Has ganado!</string>
+    <string name="dialoguereturnmap">Volver al mapa de niveles</string>
+
 </resources>
