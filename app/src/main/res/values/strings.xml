@@ -14,5 +14,17 @@
     <string name="dialogueYouWin">You have won!</string>
     <string name="dialoguereturnmap">Return to level map</string>
 
+    <string name="sound_Configuration">Sound Configuration</string>
+    <string name="volumen">Volume</string>
+
+    <string name="language_conf">Language Configuration</string>
+    <string name="textlanguageCat">Catalan</string>
+    <string name="buttonCat">Change the language to Catalan</string>
+
+    <string name="textlanguageEsp">Espanish</string>
+    <string name="buttonEsp">Change the language to Spanish</string>
+
+    <string name="textlanguageeng">English</string>
+    <string name="buttonEng">Change the language to English</string>
 
 </resources>

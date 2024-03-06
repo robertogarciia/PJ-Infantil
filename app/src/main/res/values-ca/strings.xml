@@ -15,4 +15,18 @@
     <string name="dialogueCongratulations">Felicitats</string>
     <string name="dialogueYouWin">Has guanyat!</string>
     <string name="dialoguereturnmap">Tornar al mapa de nivells</string>
+
+    <string name="sound_Configuration">Configuració de só</string>
+    <string name="volumen">Volum</string>
+
+    <string name="language_conf">Configuració d\'idioma</string>
+
+    <string name="textlanguageCat">Català</string>
+    <string name="buttonCat">Cambia el llenguatge al Català</string>
+
+    <string name="textlanguageEsp">Castellà</string>
+    <string name="buttonEsp">Cambia el llenguatge al Castellà</string>
+
+    <string name="textlanguageeng">Anglès</string>
+    <string name="buttonEng">Cambia el llenguatge al Anglès</string>
 </resources>
