@@ -15,4 +15,8 @@
     <string name="dialogueYouWin">Has ganado!</string>
     <string name="dialoguereturnmap">Volver al mapa de niveles</string>
 
+    <string name="sound_Configuration">Configuración de sonido</string>
+
+    <string name="volumen">Volumen</string>
+
 </resources>

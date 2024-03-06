@@ -14,5 +14,9 @@
     <string name="dialogueYouWin">You have won!</string>
     <string name="dialoguereturnmap">Return to level map</string>
 
+    <string name="sound_Configuration">Sound Configuration</string>
+    <string name="volumen">Volume</string>
+
+
 
 </resources>
