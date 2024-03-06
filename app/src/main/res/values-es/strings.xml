@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PJ-Infantil</string>
+    <string name="PlayMenuPrincipal">Jugar</string>
+    <string name="ConfigMenuPrincipal">Configuració</string>
+    <string name="HistoriaMenuPrincipal">Història</string>
+
+    <string name="colorsBlue">Azul</string>
+    <string name="colorsPurple">Morado</string>
+    <string name="colorsRed">Rojo</string>
+    <string name="colorsGreen">Verde</string>
+    <string name="colorsPink">Rosa</string>
+
+</resources>

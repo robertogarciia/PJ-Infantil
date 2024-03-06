@@ -48,7 +48,7 @@
         android:layout_height="0dp"
         android:paddingLeft="350dp"
         android:paddingTop="100dp"
-        android:text="@string/pickColorLev1"
+        android:text=""
         android:textSize="250dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -62,12 +62,12 @@ class MapLevels: AppCompatActivity() {
             val intent = Intent(this, level1puzzle::class.java)
             startActivity(intent)
         }
-/*
+
         level7Button.setOnClickListener {
-            val intent = Intent(this, level7memory::class.java)
+            val intent = Intent(this, lev2colors::class.java)
             startActivity(intent)
         }
-
+/*
         level8Button.setOnClickListener {
             val intent = Intent(this, level8memory::class.java)
             startActivity(intent)
