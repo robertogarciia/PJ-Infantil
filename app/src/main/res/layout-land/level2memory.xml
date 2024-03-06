@@ -21,8 +21,8 @@
 
     <ImageButton
         android:id="@+id/madera_1"
-        android:layout_width="238dp"
-        android:layout_height="334dp"
+        android:layout_width="193dp"
+        android:layout_height="292dp"
         android:layout_marginStart="40dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline_1"
         app:layout_constraintEnd_toStartOf="@+id/guideline_2"
@@ -35,7 +35,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.3" />
+        app:layout_constraintGuide_percent="0.25" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_1"
@@ -46,8 +46,8 @@
 
     <ImageButton
         android:id="@+id/madera_2"
-        android:layout_width="238dp"
-        android:layout_height="334dp"
+        android:layout_width="193dp"
+        android:layout_height="292dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline_1"
         app:layout_constraintEnd_toStartOf="@+id/guideline26"
         app:layout_constraintStart_toStartOf="@+id/guideline_2"
@@ -56,8 +56,8 @@
 
     <ImageButton
         android:id="@+id/madera_3"
-        android:layout_width="238dp"
-        android:layout_height="334dp"
+        android:layout_width="193dp"
+        android:layout_height="292dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline_1"
         app:layout_constraintEnd_toStartOf="@+id/guideline27"
         app:layout_constraintStart_toStartOf="@+id/guideline26"
@@ -66,18 +66,18 @@
 
     <ImageButton
         android:id="@+id/madera_4"
-        android:layout_width="238dp"
-        android:layout_height="334dp"
+        android:layout_width="193dp"
+        android:layout_height="292dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline_1"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline66"
         app:layout_constraintStart_toStartOf="@+id/guideline27"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/tablamemory" />
 
     <ImageButton
         android:id="@+id/madera_5"
-        android:layout_width="238dp"
-        android:layout_height="334dp"
+        android:layout_width="193dp"
+        android:layout_height="292dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline_2"
         app:layout_constraintHorizontal_bias="0.636"
@@ -87,8 +87,8 @@
 
     <ImageButton
         android:id="@+id/madera_6"
-        android:layout_width="238dp"
-        android:layout_height="334dp"
+        android:layout_width="193dp"
+        android:layout_height="292dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline26"
         app:layout_constraintStart_toStartOf="@+id/guideline_2"
@@ -97,8 +97,8 @@
 
     <ImageButton
         android:id="@+id/madera_7"
-        android:layout_width="238dp"
-        android:layout_height="334dp"
+        android:layout_width="193dp"
+        android:layout_height="292dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline27"
         app:layout_constraintStart_toStartOf="@+id/guideline26"
@@ -107,10 +107,10 @@
 
     <ImageButton
         android:id="@+id/madera_8"
-        android:layout_width="238dp"
-        android:layout_height="334dp"
+        android:layout_width="193dp"
+        android:layout_height="292dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline66"
         app:layout_constraintStart_toStartOf="@+id/guideline27"
         app:layout_constraintTop_toTopOf="@+id/guideline_1"
         app:srcCompat="@drawable/tablamemory" />
@@ -120,23 +120,25 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.52" />
+        app:layout_constraintGuide_percent="0.41" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline27"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.75" />
+        app:layout_constraintGuide_percent="0.63" />
 
     <ImageView
         android:id="@+id/par1_1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="127dp"
+        android:layout_height="230dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline_1"
         app:layout_constraintEnd_toStartOf="@+id/guideline_2"
+        app:layout_constraintHorizontal_bias="0.57"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.494"
         app:srcCompat="@drawable/conillpjinfantil" />
 
     <ImageView
@@ -151,8 +153,8 @@
 
     <ImageView
         android:id="@+id/par2_1"
-        android:layout_width="178dp"
-        android:layout_height="203dp"
+        android:layout_width="146dp"
+        android:layout_height="173dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline_1"
         app:layout_constraintEnd_toStartOf="@+id/guideline26"
         app:layout_constraintStart_toStartOf="@+id/guideline_2"
@@ -205,8 +207,10 @@
         android:layout_height="275dp"
         app:layout_constraintBottom_toBottomOf="@+id/madera_4"
         app:layout_constraintEnd_toEndOf="@+id/madera_4"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/madera_4"
         app:layout_constraintTop_toTopOf="@+id/madera_4"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/ardilla" />
 
     <ImageView
@@ -232,6 +236,68 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="78dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline65"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline66"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="1028dp" />
+
+    <ImageButton
+        android:id="@+id/madera_9"
+        android:layout_width="193dp"
+        android:layout_height="292dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline66"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/tablamemory" />
+
+    <ImageButton
+        android:id="@+id/madera_10"
+        android:layout_width="193dp"
+        android:layout_height="292dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline66"
+        app:layout_constraintTop_toTopOf="@+id/guideline_1"
+        app:srcCompat="@drawable/tablamemory" />
+
+    <ImageView
+        android:id="@+id/par5_1"
+        android:layout_width="154dp"
+        android:layout_height="256dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginBottom="19dp"
+        app:layout_constraintBottom_toBottomOf="@+id/madera_9"
+        app:layout_constraintEnd_toEndOf="@+id/madera_9"
+        app:layout_constraintStart_toStartOf="@+id/madera_9"
+        app:layout_constraintTop_toTopOf="@+id/madera_9"
+        app:srcCompat="@drawable/azul" />
+
+    <ImageView
+        android:id="@+id/par5_2"
+        android:layout_width="154dp"
+        android:layout_height="256dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginBottom="14dp"
+        app:layout_constraintBottom_toBottomOf="@+id/madera_10"
+        app:layout_constraintEnd_toEndOf="@+id/madera_10"
+        app:layout_constraintStart_toStartOf="@+id/madera_10"
+        app:layout_constraintTop_toTopOf="@+id/madera_10"
+        app:srcCompat="@drawable/azul" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
