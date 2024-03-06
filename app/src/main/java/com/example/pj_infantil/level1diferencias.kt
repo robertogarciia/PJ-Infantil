@@ -112,9 +112,9 @@ class level1diferencias : AppCompatActivity() {
 
     private fun showCompletionDialog() {
         val builder = AlertDialog.Builder(this)
-        builder.setTitle("¡MOLT BÉ!")
-        builder.setMessage("HAS ACABAT EL JOC DE LES DIFERENCIES.")
-        builder.setPositiveButton("ACCEPTAR") { dialog, _ ->
+        builder.setTitle(R.string.dialogueCongratulations)
+        builder.setMessage(R.string.dialogueYouWin)
+        builder.setPositiveButton(R.string.dialoguereturnmap) { dialog, _ ->
             dialog.dismiss()
             val intent = Intent(this, SecundaryMenu::class.java)
             startActivity(intent)

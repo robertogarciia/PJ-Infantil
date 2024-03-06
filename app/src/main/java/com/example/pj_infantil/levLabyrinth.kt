@@ -97,9 +97,9 @@ class levLabyrinth : AppCompatActivity() {
         }
         private fun showGameWonDialog() {
             val builder = AlertDialog.Builder(context)
-            builder.setTitle("¡Felicitats!")
-            builder.setMessage("¡Has guanyat!")
-            builder.setPositiveButton("Tornar al mapa de nivells") { dialog, _ ->
+            builder.setTitle(R.string.dialogueCongratulations)
+            builder.setMessage(R.string.dialogueYouWin)
+            builder.setPositiveButton(R.string.dialoguereturnmap) { dialog, _ ->
                 val intent = Intent(context, MapLevels::class.java)
                 context.startActivity(intent)
                 dialog.dismiss()

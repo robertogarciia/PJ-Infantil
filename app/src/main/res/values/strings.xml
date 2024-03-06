@@ -4,15 +4,15 @@
     <string name="ConfigMenuPrincipal">Configuració</string>
     <string name="HistoriaMenuPrincipal">Història</string>
 
-    <string name="colorsBlue">Blau</string>
+    <string name="colorsBlue">Blue</string>
     <string name="colorsPurple">Purple</string>
     <string name="colorsRed">Red</string>
     <string name="colorsGreen">Green</string>
     <string name="colorsPink">Pink</string>
 
-
-
-
+    <string name="dialogueCongratulations">Congratulations</string>
+    <string name="dialogueYouWin">You have won!</string>
+    <string name="dialoguereturnmap">Return to level map</string>
 
 
 </resources>

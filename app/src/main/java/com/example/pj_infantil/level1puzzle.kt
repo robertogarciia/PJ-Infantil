@@ -358,9 +358,9 @@ class level1puzzle : AppCompatActivity() {
 
     private fun showCompletionDialog() {
         val builder = AlertDialog.Builder(this)
-        builder.setTitle("¡MOLT BÉ!")
-        builder.setMessage("HAS ACABAT EL JOC DEL PUZZLE.")
-        builder.setPositiveButton("ACCEPTAR") { dialog, _ ->
+        builder.setTitle(R.string.dialogueCongratulations)
+        builder.setMessage(R.string.dialogueYouWin)
+        builder.setPositiveButton(R.string.dialoguereturnmap) { dialog, _ ->
             dialog.dismiss()
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
