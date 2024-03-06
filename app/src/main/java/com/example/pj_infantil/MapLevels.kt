@@ -67,12 +67,10 @@ class MapLevels: AppCompatActivity() {
             val intent = Intent(this, lev2colors::class.java)
             startActivity(intent)
         }
-/*
+
         level8Button.setOnClickListener {
-            val intent = Intent(this, level8memory::class.java)
+            val intent = Intent(this, level2memory::class.java)
             startActivity(intent)
         }
-*/
-
     }
 }
