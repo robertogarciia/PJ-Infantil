@@ -9,7 +9,14 @@ import androidx.appcompat.app.AppCompatActivity
 
 class lev1Activity : AppCompatActivity() {
     private lateinit var contadorTextView: TextView
-    private val colors =  arrayOf("Rojo", "Verde", "Azul", "Lila") // Colores que se van a mostrar
+    private val colors = arrayOf(
+        R.string.colorsBlue,
+        R.string.colorsPurple,
+        R.string.colorsRed,
+        R.string.colorsGreen,
+
+    )
+
     private var previousColor: String? = null
     private lateinit var correctColor: String
     private var contador: Int = 0
@@ -46,7 +53,7 @@ class lev1Activity : AppCompatActivity() {
     private fun startGame() {
         // Elegir un color aleatorio que no sea el mismo que el anterior
         do {
-            correctColor = colors[(0 until colors.size).random()]
+            correctColor = getString(colors[(0 until colors.size).random()])
         } while (correctColor == previousColor)
 
         // Actualizar el color anterior
@@ -56,6 +63,7 @@ class lev1Activity : AppCompatActivity() {
         val colorText: TextView = findViewById(R.id.imgPickColorUserPickLev1)
         colorText.text = correctColor
     }
+
 
     private fun checkColor(imageView: ImageView) {
         // Obtener el color asociado a la imagen
@@ -95,7 +103,7 @@ class lev1Activity : AppCompatActivity() {
     private fun getColorForImageView(imageView: ImageView): String {
         // Obtener el color asociado a la imagen
         return when (imageView.id) {
-            R.id.PickColorBlueLev1 -> "Azul"
+            R.id.PickColorBlueLev1 -> "Blau"
             R.id.PickColorRedLev1 -> "Rojo"
             R.id.PickColorLev1BackgroundGeneral -> "Verde"
             R.id.PickColorPurpleLev1 -> "Lila"
