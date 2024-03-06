@@ -19,4 +19,15 @@
 
     <string name="volumen">Volumen</string>
 
+    <string name="language_conf">Configuración de idioma</string>
+
+    <string name="textlanguageCat">Catalán</string>
+    <string name="buttonCat">Cambia el idioma al catalán</string>
+
+    <string name="textlanguageEsp">Castellano</string>
+    <string name="buttonEsp">Cambia el idioma al castellano</string>
+
+    <string name="textlanguageeng">Inglés</string>
+    <string name="buttonEng">Cambia el idioma al inglés</string>
+
 </resources>

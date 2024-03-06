@@ -12,18 +12,17 @@ private lateinit var btnSound: ImageView
         setContentView(R.layout.menu_secundari)
 
         val btnSound = findViewById<ImageView>(R.id.imageButton3)
-
+        val languageBtn = findViewById<ImageView>(R.id.imageButton5)
 
         btnSound.setOnClickListener {
             val intent = Intent(this, Sound_conf::class.java)
             startActivity(intent)
         }
 
-       /* languageBtn.setOnClickListener {
+        languageBtn.setOnClickListener {
             val intent = Intent(this, Language_conf::class.java)
             startActivity(intent)
         }
-        */
 
     }
 }
