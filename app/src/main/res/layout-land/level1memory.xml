@@ -157,7 +157,7 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline26"
         app:layout_constraintStart_toStartOf="@+id/guideline_2"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/lev2png" />
+        app:srcCompat="@drawable/snake" />
 
     <ImageView
         android:id="@+id/par2_2"
@@ -167,7 +167,7 @@
         app:layout_constraintEnd_toEndOf="@+id/madera_6"
         app:layout_constraintStart_toStartOf="@+id/madera_6"
         app:layout_constraintTop_toTopOf="@+id/madera_6"
-        app:srcCompat="@drawable/lev2png" />
+        app:srcCompat="@drawable/snake" />
 
     <ImageView
         android:id="@+id/par3_1"
@@ -197,7 +197,7 @@
         app:layout_constraintEnd_toEndOf="@+id/madera_5"
         app:layout_constraintStart_toStartOf="@+id/madera_5"
         app:layout_constraintTop_toTopOf="@+id/madera_5"
-        app:srcCompat="@drawable/level3fin" />
+        app:srcCompat="@drawable/ardilla" />
 
     <ImageView
         android:id="@+id/par4_2"
@@ -207,7 +207,7 @@
         app:layout_constraintEnd_toEndOf="@+id/madera_4"
         app:layout_constraintStart_toStartOf="@+id/madera_4"
         app:layout_constraintTop_toTopOf="@+id/madera_4"
-        app:srcCompat="@drawable/level3fin" />
+        app:srcCompat="@drawable/ardilla" />
 
     <ImageView
         android:id="@+id/HomeBackLevelMenuMemory"
