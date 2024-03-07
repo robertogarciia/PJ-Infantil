@@ -1,18 +1,21 @@
 <resources>
     <string name="app_name">PJ-Infantil</string>
-    <string name="PlayMenuPrincipal">Jugar</string>
-    <string name="ConfigMenuPrincipal">Configuració</string>
-    <string name="HistoriaMenuPrincipal">Història</string>
+    <string name="PlayMenuPrincipal">PLAY</string>
+    <string name="ConfigMenuPrincipal">SETTINGS</string>
+    <string name="HistoriaMenuPrincipal">HISTORY</string>
 
-    <string name="colorsBlue">Blue</string>
-    <string name="colorsPurple">Purple</string>
-    <string name="colorsRed">Red</string>
-    <string name="colorsGreen">Green</string>
-    <string name="colorsPink">Pink</string>
+    <string name="colorsBlue">BLUE</string>
+    <string name="colorsPurple">PURPLE</string>
+    <string name="colorsRed">RED</string>
+    <string name="colorsGreen">VERD</string>
+    <string name="colorsPink">ROSA</string>
 
     <string name="dialogueCongratulations">Congratulations</string>
     <string name="dialogueYouWin">You have won!</string>
     <string name="dialoguereturnmap">Return to level map</string>
+
+    <string name="secundary_menu_sound">SOUND</string>
+    <string name="secundary_menu_language">LANGUAGE</string>
 
     <string name="sound_Configuration">Sound Configuration</string>
     <string name="volumen">Volume</string>

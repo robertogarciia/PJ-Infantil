@@ -1,22 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">PJ-Infantil</string>
-    <string name="PlayMenuPrincipal">Jugar</string>
-    <string name="ConfigMenuPrincipal">Configuració</string>
-    <string name="HistoriaMenuPrincipal">Història</string>
+    <string name="PlayMenuPrincipal">JUGAR</string>
+    <string name="ConfigMenuPrincipal">CONFIGURACION</string>
+    <string name="HistoriaMenuPrincipal">HISTORIA</string>
 
-    <string name="colorsBlue">Azul</string>
-    <string name="colorsPurple">Morado</string>
-    <string name="colorsRed">Rojo</string>
-    <string name="colorsGreen">Verde</string>
-    <string name="colorsPink">Rosa</string>
+    <string name="colorsBlue">AZUL</string>
+    <string name="colorsPurple">MORADO</string>
+    <string name="colorsRed">ROJO</string>
+    <string name="colorsGreen">VERDE</string>
+    <string name="colorsPink">ROSA</string>
 
     <string name="dialogueCongratulations">Felicidades</string>
     <string name="dialogueYouWin">Has ganado!</string>
     <string name="dialoguereturnmap">Volver al mapa de niveles</string>
 
-    <string name="sound_Configuration">Configuración de sonido</string>
+    <string name="secundary_menu_sound">SONIDO</string>
+    <string name="secundary_menu_language">IDIOMA</string>
 
+    <string name="sound_Configuration">Configuración de sonido</string>
     <string name="volumen">Volumen</string>
 
     <string name="language_conf">Configuración de idioma</string>
