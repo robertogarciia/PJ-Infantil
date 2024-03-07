@@ -136,7 +136,7 @@
         android:id="@+id/textView9"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:paddingLeft="20dp"
+        android:paddingLeft="10dp"
         android:text="@string/ConfigMenuPrincipal"
         android:textStyle="bold"
         app:autoSizeTextType="uniform"

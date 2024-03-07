@@ -9,6 +9,8 @@ import android.widget.ImageButton
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.pj_infantil.R
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 
 class level1memory : AppCompatActivity() {
 
@@ -46,8 +48,7 @@ class level1memory : AppCompatActivity() {
         homebacklevel2 = findViewById(R.id.HomeBackLevelMenuMemory)
 
         homebacklevel2.setOnClickListener {
-            val intent = Intent(this, MapLevels::class.java)
-            startActivity(intent)
+            finish()
         }
     }
 
@@ -168,9 +169,12 @@ class level1memory : AppCompatActivity() {
         builder.setTitle(R.string.dialogueCongratulations)
         builder.setMessage(R.string.dialogueYouWin)
         builder.setPositiveButton(R.string.dialoguereturnmap) { dialog, _ ->
+
+            GlobalScope.launch {
+                ((applicationContext as App).db).settingsDao().updateIsdone(2)
+            }
+            finish()
             dialog.dismiss()
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
         }
         builder.create().show()
     }

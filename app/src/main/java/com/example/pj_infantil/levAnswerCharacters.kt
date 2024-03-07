@@ -10,6 +10,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.example.pj_infantil.MapLevels
 import com.example.pj_infantil.R
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 
 class levAnswerCharacters : AppCompatActivity() {
 
@@ -43,8 +45,7 @@ class levAnswerCharacters : AppCompatActivity() {
         btnOption3.setOnClickListener { checkAnswer(4) }
         btnOption4.setOnClickListener { checkAnswer(2) }
         homebacklevel1.setOnClickListener {
-            val intent = Intent(this, MapLevels::class.java)
-            startActivity(intent)
+            finish()
         }
 
         // Inicia el juego mostrando la primera imagen
@@ -101,8 +102,10 @@ class levAnswerCharacters : AppCompatActivity() {
         builder.setTitle(R.string.dialogueCongratulations)
         builder.setMessage(R.string.dialogueYouWin)
         builder.setPositiveButton(R.string.dialoguereturnmap) { dialog, _ ->
-            val intent = Intent(this, MapLevels::class.java)
-            startActivity(intent)
+            GlobalScope.launch {
+                ((applicationContext as App).db).settingsDao().updateIsdone(5)
+            }
+            finish()
             dialog.dismiss()
         }
         builder.setCancelable(false)

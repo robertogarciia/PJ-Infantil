@@ -6,6 +6,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 
 class lev2colors : AppCompatActivity() {
 
@@ -39,8 +41,7 @@ class lev2colors : AppCompatActivity() {
             homebacklevel1 = findViewById(R.id.HomeBackLevelMenu)
 
             homebacklevel1.setOnClickListener {
-                val intent = Intent(this, MapLevels::class.java)
-                startActivity(intent)
+                finish()
             }
 
             // Inicializar el juego
@@ -110,8 +111,10 @@ class lev2colors : AppCompatActivity() {
         builder.setTitle(R.string.dialogueCongratulations)
         builder.setMessage(R.string.dialogueYouWin)
         builder.setPositiveButton(R.string.dialoguereturnmap) { dialog, _ ->
-            val intent = Intent(this, MapLevels::class.java)
-            startActivity(intent)
+            GlobalScope.launch {
+                ((applicationContext as App).db).settingsDao().updateIsdone(7)
+            }
+            finish()
             dialog.dismiss()
         }
         builder.setCancelable(false)

@@ -6,9 +6,13 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import com.example.pj_infantil.room.SettingsDao
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 
 class lev1Activity : AppCompatActivity() {
     private lateinit var contadorTextView: TextView
+    private lateinit var settingsDao: SettingsDao
     private val colors = arrayOf(
         R.string.colorsBlue,
         R.string.colorsPurple,
@@ -26,6 +30,9 @@ class lev1Activity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.level1colors)
 
+        settingsDao = ((applicationContext as App).db).settingsDao()
+
+
         // Obtener referencias a los elementos de la interfaz de usuario
         val colorText: TextView = findViewById(R.id.imgPickColorUserPickLev1)
         val colorBlue: ImageView = findViewById(R.id.PickColorBlueLev1)
@@ -36,8 +43,7 @@ class lev1Activity : AppCompatActivity() {
         homebacklevel1 = findViewById(R.id.HomeBackLevelMenu)
 
         homebacklevel1.setOnClickListener {
-            val intent = Intent(this, MapLevels::class.java)
-            startActivity(intent)
+            finish()
         }
 
         // Inicializar el juego
@@ -104,8 +110,12 @@ class lev1Activity : AppCompatActivity() {
         builder.setTitle(R.string.dialogueCongratulations)
         builder.setMessage(R.string.dialogueYouWin)
         builder.setPositiveButton(R.string.dialoguereturnmap) { dialog, _ ->
-            val intent = Intent(this, MapLevels::class.java)
-            startActivity(intent)
+            GlobalScope.launch {
+                ((applicationContext as App).db).settingsDao().updateIsdone(1)
+            }
+            finish()
+
+
             dialog.dismiss()
         }
         builder.setCancelable(false)

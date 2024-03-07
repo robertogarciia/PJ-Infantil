@@ -9,6 +9,8 @@ import android.widget.ImageButton
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.pj_infantil.R
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 
 class level2memory : AppCompatActivity() {
 
@@ -51,8 +53,7 @@ class level2memory : AppCompatActivity() {
         homebacklevel2 = findViewById(R.id.HomeBackLevelMenuMemory)
 
         homebacklevel2.setOnClickListener {
-            val intent = Intent(this, MapLevels::class.java)
-            startActivity(intent)
+            finish()
         }
     }
 
@@ -186,9 +187,12 @@ class level2memory : AppCompatActivity() {
         builder.setTitle("¡MOLT BÉ!")
         builder.setMessage("HAS ACABAT EL JOC DEL MEMORI.")
         builder.setPositiveButton("ACCEPTAR") { dialog, _ ->
+
+            GlobalScope.launch {
+                ((applicationContext as App).db).settingsDao().updateIsdone(8)
+            }
+            finish()
             dialog.dismiss()
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
         }
         builder.create().show()
     }
