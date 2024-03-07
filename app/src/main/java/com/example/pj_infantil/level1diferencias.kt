@@ -7,6 +7,8 @@ import android.os.Handler
 import android.view.View
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 
 class level1diferencias : AppCompatActivity() {
 
@@ -34,8 +36,7 @@ class level1diferencias : AppCompatActivity() {
         homeBacklevel = findViewById(R.id.IVBackLevels)
 
         homeBacklevel.setOnClickListener {
-            val intent = Intent(this, MapLevels::class.java)
-            startActivity(intent)
+            finish()
         }
 
     }
@@ -115,9 +116,12 @@ class level1diferencias : AppCompatActivity() {
         builder.setTitle(R.string.dialogueCongratulations)
         builder.setMessage(R.string.dialogueYouWin)
         builder.setPositiveButton(R.string.dialoguereturnmap) { dialog, _ ->
+
+            GlobalScope.launch {
+                ((applicationContext as App).db).settingsDao().updateIsdone(4)
+            }
+            finish()
             dialog.dismiss()
-            val intent = Intent(this, MapLevels::class.java)
-            startActivity(intent)
         }
         builder.create().show()
     }

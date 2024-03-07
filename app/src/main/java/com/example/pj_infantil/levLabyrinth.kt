@@ -11,20 +11,24 @@ import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 
 class levLabyrinth : AppCompatActivity() {
 
     private lateinit var homebacklevel3 : ImageView
+    private lateinit var contextLevel : Context
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.levlabyrinth)
 
+        contextLevel = this
+
         homebacklevel3 = findViewById(R.id.HomeBackLevelMenuLabyrinth)
 
         homebacklevel3.setOnClickListener {
-            val intent = Intent(this, MapLevels::class.java)
-            startActivity(intent)
+            finish()
         }
 
             // Obtenir la referència de la vista "DrawingView"
@@ -100,8 +104,10 @@ class levLabyrinth : AppCompatActivity() {
             builder.setTitle(R.string.dialogueCongratulations)
             builder.setMessage(R.string.dialogueYouWin)
             builder.setPositiveButton(R.string.dialoguereturnmap) { dialog, _ ->
-                val intent = Intent(context, MapLevels::class.java)
-                context.startActivity(intent)
+                GlobalScope.launch {
+                    ((context.applicationContext as App).db).settingsDao().updateIsdone(3)
+                }
+                (context as? levLabyrinth)?.finish()
                 dialog.dismiss()
             }
             builder.setCancelable(false)

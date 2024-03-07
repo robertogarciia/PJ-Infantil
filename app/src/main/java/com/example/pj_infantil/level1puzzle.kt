@@ -9,6 +9,8 @@ import android.widget.ImageButton
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.pj_infantil.R
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 
 class level1puzzle : AppCompatActivity() {
 
@@ -72,8 +74,7 @@ class level1puzzle : AppCompatActivity() {
         homebacklevel6 = findViewById(R.id.HomeBackLevelMenu)
 
         homebacklevel6.setOnClickListener {
-            val intent = Intent(this, MapLevels::class.java)
-            startActivity(intent)
+            finish()
         }
 
         game()
@@ -361,9 +362,12 @@ class level1puzzle : AppCompatActivity() {
         builder.setTitle(R.string.dialogueCongratulations)
         builder.setMessage(R.string.dialogueYouWin)
         builder.setPositiveButton(R.string.dialoguereturnmap) { dialog, _ ->
+
+            GlobalScope.launch {
+                ((applicationContext as App).db).settingsDao().updateIsdone(6)
+            }
+            finish()
             dialog.dismiss()
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
         }
         builder.create().show()
     }

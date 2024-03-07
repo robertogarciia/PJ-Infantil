@@ -176,5 +176,15 @@
         android:orientation="vertical"
         app:layout_constraintGuide_begin="1016dp" />
 
+    <ImageView
+        android:id="@+id/flechaback"
+        android:layout_width="120dp"
+        android:layout_height="137dp"
+        app:layout_constraintBottom_toTopOf="@+id/level1"
+        app:layout_constraintEnd_toStartOf="@+id/level5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline28"
+        app:srcCompat="@drawable/flecha_enrere" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
