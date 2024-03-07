@@ -94,11 +94,11 @@ class lev2colors : AppCompatActivity() {
     private fun getColorForImageView(imageView: ImageView): List<String> {
         // Obtener el color asociado a la imagen
         return when (imageView.id) {
-            R.id.PickColorBlueLev1 -> listOf("Blau", "Blue", "Azul")
-            R.id.PickColorRedLev1 -> listOf("Vermell", "Red", "Rojo")
-            R.id.PickColorLev1BackgroundGeneral -> listOf("Verd", "Green", "Verde")
-            R.id.PickColorPurpleLev1 -> listOf("Lila", "Purple")
-            R.id.PickColorPinkLev1 -> listOf("Rosa", "Pink")
+            R.id.PickColorBlueLev1 -> listOf("BLAU", "BLUE", "AZUL")
+            R.id.PickColorRedLev1 -> listOf("VERMELL", "RED", "ROJO")
+            R.id.PickColorGreenLev1 -> listOf("VERD", "GREEN", "VERDE")
+            R.id.PickColorPurpleLev1 -> listOf("LILA", "PURPLE")
+            R.id.PickColorPinkLev1 -> listOf("ROSA", "PINK")
             else -> emptyList()
         }
     }

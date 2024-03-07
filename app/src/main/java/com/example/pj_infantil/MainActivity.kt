@@ -3,14 +3,15 @@ package com.example.pj_infantil
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var buttonPlayMenuPrincipal: TextView
-    private lateinit var buttonConfigMenuPrincipal: TextView
-    private lateinit var buttonHistoryMenuPrincipal: TextView
+    private lateinit var buttonPlayMenuPrincipal: ImageView
+    private lateinit var buttonConfigMenuPrincipal: ImageView
+    private lateinit var buttonHistoryMenuPrincipal: ImageView
 
     //prueba 2
 
@@ -18,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_menu_principal)
 
-        buttonPlayMenuPrincipal = findViewById(R.id.TVPlayMenuPrincipal)
+        buttonPlayMenuPrincipal = findViewById(R.id.controllerMP)
 
         buttonPlayMenuPrincipal.setOnClickListener {
 
@@ -26,7 +27,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        buttonConfigMenuPrincipal = findViewById(R.id.TVConfigMenuPrincipal)
+        buttonConfigMenuPrincipal = findViewById(R.id.settingsMP)
 
         buttonConfigMenuPrincipal.setOnClickListener {
 
@@ -34,7 +35,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        buttonHistoryMenuPrincipal = findViewById(R.id.TVHistorMenuPrincipal)
+        buttonHistoryMenuPrincipal = findViewById(R.id.historyMP)
 
         buttonHistoryMenuPrincipal.setOnClickListener {
 

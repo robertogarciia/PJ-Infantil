@@ -1,7 +1,9 @@
 package com.example.pj_infantil
 
+import android.content.Intent
 import android.media.AudioManager
 import android.os.Bundle
+import android.widget.ImageView
 import android.widget.SeekBar
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -9,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 class Sound_conf : AppCompatActivity(){
     private lateinit var volumeSeekBar: SeekBar
     private lateinit var volumeTextView: TextView
+    private lateinit var backmenu : ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -16,6 +19,12 @@ class Sound_conf : AppCompatActivity(){
 
         volumeSeekBar = findViewById(R.id.volumeSeekBar)
         volumeTextView = findViewById(R.id.volumeTextView)
+        backmenu = findViewById<ImageView>(R.id.backSecundariMenu)
+
+        backmenu.setOnClickListener{
+            val intent = Intent(this, SecundaryMenu::class.java)
+            startActivity(intent)
+        }
 
         // Obtener el controlador de audio del sistema
         val audioManager = getSystemService(AUDIO_SERVICE) as AudioManager

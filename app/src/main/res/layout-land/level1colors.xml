@@ -46,16 +46,16 @@
         android:id="@+id/imgPickColorUserPickLev1"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:paddingLeft="350dp"
+        android:textSize="180dp"
+        android:paddingLeft="100dp"
         android:paddingTop="100dp"
         android:text=""
-        android:textSize="250dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/BackGroundTVPickColorLev1"
+        app:layout_constraintEnd_toEndOf="@+id/BackGroundTVPickColorLev1"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/BackGroundTVPickColorLev1"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline17"

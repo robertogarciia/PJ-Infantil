@@ -116,7 +116,7 @@ class level1diferencias : AppCompatActivity() {
         builder.setMessage(R.string.dialogueYouWin)
         builder.setPositiveButton(R.string.dialoguereturnmap) { dialog, _ ->
             dialog.dismiss()
-            val intent = Intent(this, SecundaryMenu::class.java)
+            val intent = Intent(this, MapLevels::class.java)
             startActivity(intent)
         }
         builder.create().show()

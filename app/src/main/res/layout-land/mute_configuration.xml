@@ -55,7 +55,7 @@
         app:layout_constraintBottom_toTopOf="@+id/volumeSeekBar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline71"
         app:layout_constraintTop_toTopOf="@+id/imageView14"
         app:layout_constraintVertical_bias="0.0" />
 
@@ -71,7 +71,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="247dp" />
+        app:layout_constraintGuide_begin="315dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline67"
@@ -99,25 +99,43 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="1093dp" />
+        app:layout_constraintGuide_begin="1166dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline71"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="35dp" />
+        app:layout_constraintGuide_begin="85dp" />
 
     <ImageView
         android:id="@+id/imageView22"
         android:layout_width="189dp"
         android:layout_height="199dp"
-        android:scaleType="centerCrop"
+
         app:layout_constraintBottom_toTopOf="@+id/guideline67"
         app:layout_constraintEnd_toStartOf="@+id/volumeSeekBar"
         app:layout_constraintStart_toStartOf="@+id/guideline71"
         app:layout_constraintTop_toTopOf="@+id/guideline65"
-        app:srcCompat="@drawable/volm_png" />
+        app:srcCompat="@drawable/pngsound" />
+
+    <ImageView
+        android:id="@+id/backSecundariMenu"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        app:layout_constraintBottom_toTopOf="@+id/guideline82"
+        app:layout_constraintEnd_toStartOf="@+id/guideline71"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/home" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline82"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="87dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
