@@ -13,7 +13,7 @@ private lateinit var homeback:ImageView
         setContentView(R.layout.menu_secundari)
 
         val btnSound = findViewById<ImageView>(R.id.imgsoundconf)
-        val languageBtn = findViewById<ImageView>(R.id.imglanguage)
+        val languageBtn = findViewById<ImageView>(R.id.imglanguageconf)
         val homeback = findViewById<ImageView>(R.id.homebacksecundaryconf)
 
         btnSound.setOnClickListener {
